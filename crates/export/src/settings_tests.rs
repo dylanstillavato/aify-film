@@ -1642,3 +1642,15 @@ fn own_importer_reads_32_bit_flac_at_full_scale() {
         }
     }
 }
+
+#[test]
+fn the_social_preset_is_a_16_mbps_vertical_reel_with_48_khz_aac() {
+    let p = presets::find_builtin(presets::SOCIAL_PRESET).unwrap();
+    assert_eq!(p.category, "Web & Social");
+    let s = &p.settings;
+    assert_eq!((s.format, s.frame_size, s.scaling), (Format::H264, Some((1080, 1920)), Scaling::ScaleToFill));
+    assert_eq!((s.bitrate_kbps, s.max_bitrate_kbps, s.bitrate_mode), (16_000, Some(20_000), BitrateMode::Vbr1Pass));
+    assert_eq!((s.audio.codec, s.audio.sample_rate, s.audio.channels, s.audio.bitrate_kbps), (AudioCodec::Aac, Some(48_000), 2, 320));
+    let web: Vec<String> = presets::builtin_presets().into_iter().filter(|p| p.category == "Web & Social").map(|p| p.name).collect();
+    assert_eq!(web.first().map(String::as_str), Some(presets::SOCIAL_PRESET), "first of Web & Social");
+}

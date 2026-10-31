@@ -193,7 +193,14 @@ pub async fn start(canvas_id: String) -> Result<(), JsValue> {
                         log::warn!("{key}: {e}");
                     }
                 }
+                // @Film: the Instagram / TikTok reel preset by default in Export and Quick Export.
+                let social = filmcraft_engine::export::presets::SOCIAL_PRESET;
+                session.export_queue.quick_preset = Some(social.to_string());
                 let mut app = FilmcraftApp::new(session);
+                if let Some(preset) = filmcraft_engine::export::presets::find_builtin(social) {
+                    app.ui.export.preset = preset.name;
+                    app.ui.export.settings = preset.settings;
+                }
                 import::install_hooks(&mut app);
                 // Settings ▸ General ▸ Interface Language ▸ System Language (#218): the browser's languages,
                 // then Spanish (@Film), so a browser with no supported language opens in Spanish.
