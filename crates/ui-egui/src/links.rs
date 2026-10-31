@@ -1,28 +1,30 @@
 //! Community and project links (Help menu, About dialog, header Discord button, Home screen).
 //!
-//! FilmCraft is part of the ArtCraft family: the community lives on the ArtCraft Discord, every
-//! app has a page on the ArtCraft website and a public GitHub repository.
+//! @Film is part of the Aify family (@Social, @Pictures, @Film, @Gen) and a fork of FilmCraft
+//! (ArtCraft team). The first link sends the video to @Social to schedule it.
 
 /// The app's short name, used in the website and repository URLs.
 pub const APP: &str = "filmcraft";
 
-/// The ArtCraft community Discord.
-pub const DISCORD: &str = "https://discord.gg/artcraft";
-/// The ArtCraft website.
-pub const WEBSITE: &str = "https://getartcraft.com";
+/// @Social, where the exported videos get scheduled (the first, highlighted link).
+pub const DISCORD: &str = "https://www.useaify.app";
+/// Aify, the family of apps.
+pub const WEBSITE: &str = "https://www.useaify.app/demo";
 /// FilmCraft's page on the ArtCraft website.
-pub const APP_PAGE: &str = "https://getartcraft.com/apps/filmcraft";
+pub const APP_PAGE: &str = "https://film.useaify.app";
 /// FilmCraft's source repository.
-pub const GITHUB: &str = "https://github.com/storytold/filmcraft";
+pub const GITHUB: &str = "https://github.com/dylanstillavato/aify-film";
 /// New issue on FilmCraft's repository.
-pub const ISSUES: &str = "https://github.com/storytold/filmcraft/issues";
+pub const ISSUES: &str = "https://github.com/dylanstillavato/aify-film/issues";
+/// FilmCraft, the editor @Film is based on.
+pub const UPSTREAM: &str = "https://github.com/storytold/filmcraft";
 
 /// (command id, label, url) for every link, in menu order.
 pub const ALL: [(&str, &str, &str); 5] = [
-    ("help.discord", "Join the ArtCraft Discord…", DISCORD),
-    ("help.website", "ArtCraft Website", WEBSITE),
-    ("help.appPage", "FilmCraft on getartcraft.com", APP_PAGE),
-    ("help.github", "FilmCraft on GitHub", GITHUB),
+    ("help.discord", "Schedule your videos in @Social…", DISCORD),
+    ("help.website", "Aify", WEBSITE),
+    ("help.appPage", "@Film Website", APP_PAGE),
+    ("help.github", "@Film on GitHub", GITHUB),
     ("help.reportIssue", "Report an Issue…", ISSUES),
 ];
 
@@ -49,8 +51,8 @@ pub fn menu_hint(command: &str) -> Option<String> {
         match command {
             "help.revealLogFiles" => tl!("Saves this session's log and shows it in your file manager."),
             "help.systemCompatibilityReport" => tl!("Shows a report on this computer."),
-            "app.about" => tl!("Shows the version, community links and credits in a FilmCraft window."),
-            "app.checkForUpdates" => tl!("Looks for a newer FilmCraft release and offers to update."),
+            "app.about" => tl!("Shows the version, community links and credits in a @Film window."),
+            "app.checkForUpdates" => tl!("Looks for a newer @Film release and offers to update."),
             _ => return None,
         }
         .to_string(),
@@ -126,9 +128,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn urls_follow_the_artcraft_scheme() {
-        assert_eq!(APP_PAGE, format!("{WEBSITE}/apps/{APP}"));
-        assert_eq!(GITHUB, format!("https://github.com/storytold/{APP}"));
+    fn urls_follow_the_aify_scheme() {
+        assert_eq!(APP_PAGE, "https://film.useaify.app");
+        assert_eq!(GITHUB, "https://github.com/dylanstillavato/aify-film");
+        assert_eq!(UPSTREAM, format!("https://github.com/storytold/{APP}"));
         assert!(ALL.iter().all(|(id, _, u)| id.starts_with("help.") && u.starts_with("https://")));
         assert_eq!(url_for("help.discord"), Some(DISCORD));
         assert_eq!(url_for("help.nope"), None);
