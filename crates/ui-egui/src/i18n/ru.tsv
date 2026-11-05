@@ -4,7 +4,7 @@
 # using Russian video-editing vocabulary (Premiere-style). No proprietary localization resources were used.
 # Core menu coverage; other interface strings fall back to English.
 
-	About FilmCraft	О FilmCraft
+	About @Film	О @Film
 	Add Audio Submix Track	Добавить дорожку подмикширования звука
 	Add Caption at Playhead	Добавить субтитр в позиции курсора воспроизведения
 	Add Chapter Marker…	Добавить маркер главы…
@@ -126,9 +126,9 @@
 	File	Файл
 	File…	Файл…
 	Fill frame	Заполнить кадр
-	FilmCraft Help…	Справка FilmCraft…
-	FilmCraft on GitHub	FilmCraft на GitHub
-	FilmCraft on getartcraft.com	FilmCraft на getartcraft.com
+	@Film Help…	Справка @Film…
+	@Film on GitHub	@Film на GitHub
+	@Film on getartcraft.com	@Film на getartcraft.com
 	Find Next	Найти далее
 	Find…	Найти…
 	Fit	По размеру
@@ -298,7 +298,7 @@
 	Select Previous Graphic	Выбрать предыдущий графический элемент
 	Select Previous Layer	Выбрать предыдущий слой
 	Selection Follows Playhead	Выделение следует за курсором воспроизведения
-	Selection as FilmCraft Project…	Выделение как проект FilmCraft…
+	Selection as @Film Project…	Выделение как проект @Film…
 	Selection…	Выделение…
 	Send Backward	Переместить назад
 	Send to Back	Переместить на задний план

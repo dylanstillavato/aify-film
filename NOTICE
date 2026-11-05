@@ -1,3 +1,14 @@
+@Film
+Copyright (c) 2026 Aify y los colaboradores de @Film.
+
+@Film es un fork de FilmCraft (https://github.com/storytold/filmcraft), con la misma
+licencia: MIT o Apache-2.0, a elegir (LICENSE-MIT, LICENSE-APACHE). Los cambios de Aify están en
+el historial de git de este repositorio. El aviso original de FilmCraft sigue a continuación.
+El nombre, el logotipo y las marcas de ArtCraft se han retirado de este fork, como piden sus
+condiciones (el antiguo docs/brand/LICENSE-brand.txt).
+
+----
+
 FilmCraft
 Copyright (c) 2026 ArtCraft Team and the FilmCraft contributors.
 Licensed under the MIT License or the Apache License, Version 2.0, at your option

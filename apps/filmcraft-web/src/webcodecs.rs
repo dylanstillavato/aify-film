@@ -616,7 +616,7 @@ impl MediaSource for WcSource {
                 Err(MediaError::Decode("WebCodecs: decoding".into()))
             }
             Drive::Failed => {
-                log::warn!("{}: WebCodecs failed, using FilmCraft's decoder", self.info.name);
+                log::warn!("{}: WebCodecs failed, using @Film's decoder", self.info.name);
                 FALLBACKS.with(|f| f.set(f.get() + 1));
                 c.failed = true;
                 drop(c);

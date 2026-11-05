@@ -20,7 +20,7 @@
 # Option = Wahl, Ctrl = Strg.
 
 	AAF…	AAF…
-	About FilmCraft	Über FilmCraft
+	About @Film	Über @Film
 	Add Audio Submix Track	Audio-Submix-Spur hinzufügen
 	Add Caption at Playhead	Untertitel an Abspielposition hinzufügen
 	Add Chapter Marker…	Kapitelmarker hinzufügen…
@@ -150,9 +150,9 @@
 	File	Datei
 	File…	Datei…
 	Fill frame	Bild füllen
-	FilmCraft Help…	FilmCraft-Hilfe…
-	FilmCraft on GitHub	FilmCraft auf GitHub
-	FilmCraft on getartcraft.com	FilmCraft auf getartcraft.com
+	@Film Help…	@Film-Hilfe…
+	@Film on GitHub	@Film auf GitHub
+	@Film on getartcraft.com	@Film auf getartcraft.com
 	Final Cut Pro XML…	Final Cut Pro XML…
 	Find Next	Weitersuchen
 	Find…	Suchen…
@@ -186,7 +186,7 @@
 	Guide Templates	Hilfslinienvorlagen
 	Help	Hilfe
 	Hide All Caption Tracks	Alle Untertitelspuren ausblenden
-	Hide FilmCraft	FilmCraft ausblenden
+	Hide @Film	@Film ausblenden
 	Hide Others	Andere ausblenden
 	High Quality Playback	Wiedergabe in hoher Qualität
 	History	Verlauf
@@ -279,7 +279,7 @@
 	Properties	Eigenschaften
 	Proxy	Proxy
 	Purple	Lila
-	Quit FilmCraft	FilmCraft beenden
+	Quit @Film	@Film beenden
 	Reconnect Full Resolution Media…	Medien in voller Auflösung neu verknüpfen…
 	Recover Unsaved Changes…	Nicht gespeicherte Änderungen wiederherstellen…
 	Rectangle	Rechteck
@@ -336,7 +336,7 @@
 	Select Previous Graphic	Vorherige Grafik auswählen
 	Select Previous Layer	Vorherige Ebene auswählen
 	Selection Follows Playhead	Auswahl folgt Abspielposition
-	Selection as FilmCraft Project…	Auswahl als FilmCraft-Projekt…
+	Selection as @Film Project…	Auswahl als @Film-Projekt…
 	Selection…	Auswahl…
 	Send Backward	Schrittweise nach hinten
 	Send to Back	In den Hintergrund
@@ -476,8 +476,8 @@
 	No background jobs.	Keine Hintergrundaufträge.
 	Recover Unsaved Changes	Nicht gespeicherte Änderungen wiederherstellen
 	Untitled	Unbenannt
-	FilmCraft was closed while “{name}” had unsaved changes.	FilmCraft wurde geschlossen, während „{name}“ nicht gespeicherte Änderungen hatte.
-	FilmCraft quit unexpectedly while “{name}” had unsaved changes.	FilmCraft wurde unerwartet beendet, während „{name}“ nicht gespeicherte Änderungen hatte.
+	@Film was closed while “{name}” had unsaved changes.	@Film wurde geschlossen, während „{name}“ nicht gespeicherte Änderungen hatte.
+	@Film quit unexpectedly while “{name}” had unsaved changes.	@Film wurde unerwartet beendet, während „{name}“ nicht gespeicherte Änderungen hatte.
 	Recover unsaved changes from {when}?	Nicht gespeicherte Änderungen von {when} wiederherstellen?
 	The project had not been saved yet.	Das Projekt war noch nicht gespeichert worden.
 	{n} sessions have unsaved changes:	{n} Sitzungen haben nicht gespeicherte Änderungen:
@@ -1002,7 +1002,7 @@
 	Font family	Schriftfamilie
 	Label Colors	Markierungsfarben
 	Decoded frames held for the monitors and thumbnails: {used} of {budget}.	Für Monitore und Miniaturen vorgehaltene dekodierte Frames: {used} von {budget}.
-	FilmCraft keeps the rest of the RAM free for other applications.	FilmCraft lässt den restlichen Arbeitsspeicher für andere Programme frei.
+	@Film keeps the rest of the RAM free for other applications.	@Film lässt den restlichen Arbeitsspeicher für andere Programme frei.
 	not available in this session	in dieser Sitzung nicht verfügbar
 	Currently: {loc} — {files} file(s), {size}	Aktuell: {loc} – {files} Datei(en), {size}
 	 ({ch} output channels)	 ({ch} Ausgangskanäle)
@@ -1114,7 +1114,7 @@
 	Video Frame	Videobild
 	Pin To	Anheften an
 	Pinned Edges	Angeheftete Kanten
-	FilmCraft Graphics Template	FilmCraft-Grafikvorlage
+	@Film Graphics Template	@Film-Grafikvorlage
 	{n} Font	{n} Schrift
 	{n} Size	{n} Größe
 	{n} Color	{n} Farbe
@@ -1124,7 +1124,7 @@
 	Export As Motion Graphics Template	Als Motion-Graphics-Vorlage exportieren
 	Category:	Kategorie:
 	Editable properties:	Bearbeitbare Eigenschaften:
-	Saved as a FilmCraft graphics template (.fcgt) in your templates folder.	Wird als FilmCraft-Grafikvorlage (.fcgt) in deinem Vorlagenordner gespeichert.
+	Saved as a @Film graphics template (.fcgt) in your templates folder.	Wird als @Film-Grafikvorlage (.fcgt) in deinem Vorlagenordner gespeichert.
 	Exported graphics template to {path}	Grafikvorlage nach {path} exportiert
 	Replace Fonts in Projects	Schriften in Projekten ersetzen
 	Fonts used in the project:	Im Projekt verwendete Schriften:
@@ -1493,7 +1493,7 @@
 	Center of Sphere	Kugelmittelpunkt
 	Cents	Cent
 	Change to Color	In Farbe ändern
-	Changes are copied in the background a moment after each edit. If FilmCraft quits unexpectedly, they are offered the next time it starts.	Änderungen werden kurz nach jeder Bearbeitung im Hintergrund kopiert. Wird FilmCraft unerwartet beendet, werden sie beim nächsten Start angeboten.
+	Changes are copied in the background a moment after each edit. If @Film quits unexpectedly, they are offered the next time it starts.	Änderungen werden kurz nach jeder Bearbeitung im Hintergrund kopiert. Wird @Film unerwartet beendet, werden sie beim nächsten Start angeboten.
 	Channel	Kanal
 	Channel Blur	Kanal-Weichzeichner
 	Channel Mix	Kanalmischung
@@ -1864,7 +1864,7 @@
 	Hard Limiter	Harter Limiter
 	Hard Mix	Hart mischen
 	Hardware decoding	Hardwaredekodierung
-	Hardware decoding: Auto uses the system's video decoder (VideoToolbox on macOS, Media Foundation on Windows, VA-API or NVDEC for H.264 and HEVC on Linux) for the streams it supports, and FilmCraft's own decoder for everything else or if the hardware fails. Media that is already open keeps its decoder until it is reopened.	Hardwaredekodierung: „Automatisch“ verwendet den Videodecoder des Systems (VideoToolbox unter macOS, Media Foundation unter Windows, VA-API oder NVDEC für H.264 und HEVC unter Linux) für die Streams, die er unterstützt, und den eigenen Decoder von FilmCraft für alles andere oder wenn die Hardware versagt. Bereits geöffnete Medien behalten ihren Decoder, bis sie erneut geöffnet werden.
+	Hardware decoding: Auto uses the system's video decoder (VideoToolbox on macOS, Media Foundation on Windows, VA-API or NVDEC for H.264 and HEVC on Linux) for the streams it supports, and @Film's own decoder for everything else or if the hardware fails. Media that is already open keeps its decoder until it is reopened.	Hardwaredekodierung: „Automatisch“ verwendet den Videodecoder des Systems (VideoToolbox unter macOS, Media Foundation unter Windows, VA-API oder NVDEC für H.264 und HEVC unter Linux) für die Streams, die er unterstützt, und den eigenen Decoder von @Film für alles andere oder wenn die Hardware versagt. Bereits geöffnete Medien behalten ihren Decoder, bis sie erneut geöffnet werden.
 	Head Size	Kopfgröße
 	Heart	Herz
 	Height	Höhe
@@ -2136,7 +2136,7 @@
 	Night	Nacht
 	No Motion	Keine Bewegung
 	No Scroll	Kein Bildlauf
-	No plugins are installed. Changes will take effect the next time you start FilmCraft.	Es sind keine Plug-ins installiert. Änderungen werden beim nächsten Start von FilmCraft wirksam.
+	No plugins are installed. Changes will take effect the next time you start @Film.	Es sind keine Plug-ins installiert. Änderungen werden beim nächsten Start von @Film wirksam.
 	Noise	Rauschen
 	Noise & Grain	Rauschen und Körnung
 	Noise (Legacy)	Rauschen (alt)
@@ -2567,7 +2567,7 @@
 	Template Properties	Vorlageneigenschaften
 	Text Animator	Text-Animator
 	Text Color	Textfarbe
-	The media cache holds render previews of unsaved projects and other files FilmCraft can recreate. Deleting them is always safe; FilmCraft rebuilds them as needed.	Der Mediencache enthält gerenderte Vorschauen nicht gespeicherter Projekte und andere Dateien, die FilmCraft neu erstellen kann. Sie zu löschen ist immer unbedenklich; FilmCraft erzeugt sie bei Bedarf neu.
+	The media cache holds render previews of unsaved projects and other files @Film can recreate. Deleting them is always safe; @Film rebuilds them as needed.	Der Mediencache enthält gerenderte Vorschauen nicht gespeicherter Projekte und andere Dateien, die @Film neu erstellen kann. Sie zu löschen ist immer unbedenklich; @Film erzeugt sie bei Bedarf neu.
 	Thickness	Dicke
 	Tile Gradient	Gekachelter Verlauf
 	Tilt	Neigung
@@ -2764,7 +2764,7 @@
 	System Compatibility Report	Systemkompatibilitätsbericht
 	no GPU adapter: the CPU compositor is used	kein GPU-Adapter: der CPU-Compositor wird verwendet
 	Avid Log Exchange	Avid Log Exchange
-	FilmCraft Project	FilmCraft-Projekt
+	@Film Project	@Film-Projekt
 	{name} Selection.fcproj	{name} Auswahl.fcproj
 	{name} (Simplified)	{name} (vereinfacht)
 	Find in:	Suchen in:
@@ -2904,7 +2904,7 @@
 	Start Queue	Warteschlange starten
 	Stop	Stopp
 	Clear Finished	Abgeschlossene entfernen
-	Not supported by FilmCraft's encoders yet	Von den Encodern in FilmCraft noch nicht unterstützt
+	Not supported by @Film's encoders yet	Von den Encodern in @Film noch nicht unterstützt
 	Sequence name	Sequenzname
 	Folder	Ordner
 	Preset	Vorgabe
@@ -2994,7 +2994,7 @@
 	Drag a clip to slide it between its neighbours.	Zieh einen Clip, um ihn zwischen seinen Nachbarn zu verschieben (Slide).
 	Drag to scroll the timeline.	Ziehen scrollt die Timeline.
 	Click to zoom in; Opt-click to zoom out.	Klicken vergrößert; Wahl+Klick verkleinert.
-	FilmCraft hit an error	In FilmCraft ist ein Fehler aufgetreten
+	@Film hit an error	In @Film ist ein Fehler aufgetreten
 	Details: {path}	Details: {path}
 	Opened {url}	{url} geöffnet
 	(empty)	(leer)
@@ -3554,8 +3554,8 @@
 	Composite in Linear Color	In linearem Farbraum zusammensetzen
 	Auto Tone Map Media (HDR and log into SDR)	Automatisches Tone-Mapping für Medien (HDR und Log nach SDR)
 	Configure…	Konfigurieren…
-	Not supported in FilmCraft yet	In FilmCraft noch nicht unterstützt
-	FilmCraft always composites in linear light	FilmCraft setzt immer in linearem Licht zusammen
+	Not supported in @Film yet	In @Film noch nicht unterstützt
+	@Film always composites in linear light	@Film setzt immer in linearem Licht zusammen
 	Loop marked range	Markierten Bereich in Schleife
 	Play Source	Quelle abspielen
 	Source Play/Stop	Quelle Wiedergabe/Stopp
@@ -3612,7 +3612,7 @@
 	Opens in your web browser: {url}	Wird in deinem Webbrowser geöffnet: {url}
 	Saves this session's log and shows it in your file manager.	Speichert das Protokoll dieser Sitzung und zeigt es in deinem Dateimanager.
 	Shows a report on this computer.	Zeigt einen Bericht über diesen Computer.
-	Shows the version, community links and credits in a FilmCraft window.	Zeigt Version, Community-Links und Credits in einem FilmCraft-Fenster.
+	Shows the version, community links and credits in a @Film window.	Zeigt Version, Community-Links und Credits in einem @Film-Fenster.
 	Couldn't open your web browser	Dein Webbrowser konnte nicht geöffnet werden
 	Open this address in your browser yourself:	Öffne diese Adresse selbst in deinem Browser:
 

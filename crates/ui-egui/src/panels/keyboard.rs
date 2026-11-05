@@ -131,8 +131,8 @@ pub const COMMANDS: &[UiCommand] = &[
     uic!("mixer.showHideTracks", "Show/Hide Tracks…", [], None),
     uic!("mixer.meterInputOnly", "Meter Input(s) Only", [], None),
     uic!("graphics.beginTextEditing", "Begin Text Editing for a Graphic Layer", [], Some("Cmd+Alt+'")),
-    uic!("help.filmcraftHelp", "FilmCraft Help…", ["Help"], Some("F1")),
-    uic!("app.quit", "Quit FilmCraft", [], Some("Cmd+Q")),
+    uic!("help.filmcraftHelp", "@Film Help…", ["Help"], Some("F1")),
+    uic!("app.quit", "Quit @Film", [], Some("Cmd+Q")),
 ];
 
 /// FilmCraft's documentation (Help ▸ FilmCraft Help…, F1).

@@ -95,16 +95,14 @@ pub(crate) fn show(app: &mut FilmcraftApp, ctx: &egui::Context) {
         (rt.manual_window_open, rt.status_message) = match rt.updater.status() {
             Status::Idle => (false, None),
             Status::Checking => (true, Some(tl!("Checking for updates…").to_string())),
-            Status::UpToDate => {
-                (true, Some(tl!("FilmCraft {version} is currently the newest version available.").replace("{version}", env!("CARGO_PKG_VERSION"))))
-            }
+            Status::UpToDate => (true, Some(tl!("@Film {version} is currently the newest version available.").replace("{version}", env!("CARGO_PKG_VERSION")))),
             Status::Failed(e) => (true, Some(tl!("Could not check for updates:\n{error}").replace("{error}", e))),
         };
     }
 
     if app.updates_rt.manual_window_open {
         let mut open = true;
-        egui::Window::new(crate::i18n::t("FilmCraft Updates"))
+        egui::Window::new(crate::i18n::t("@Film Updates"))
             .open(&mut open)
             .collapsible(false)
             .resizable(false)
@@ -155,7 +153,7 @@ mod tests {
         let release = craft_update::Release {
             tag: "v99.0.0".into(),
             version: craft_update::parse_version("99.0.0"),
-            name: "FilmCraft 99.0.0".into(),
+            name: "@Film 99.0.0".into(),
             html_url: "https://github.com/storytold/filmcraft/releases/tag/v99.0.0".into(),
             ..Default::default()
         };

@@ -1,0 +1,8 @@
+asset:        arroba-film-claro.png
+title:        @Film mark (the Aify @ and "Film"), dark ink for light backgrounds
+author:       Aify (Dylan Stillavato), for @Film
+source:       original work (Aify logos v4, resources/aify/logos/v4/)
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-31 by Claude (agent) for Dylan Stillavato
+notes:        Outlined SVG, no font shipped. PNG rendered at 320 px tall with ImageMagick; shown in the About dialog and on the Home screen (crates/ui-egui/src/brand.rs).
