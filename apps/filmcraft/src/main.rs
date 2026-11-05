@@ -270,7 +270,9 @@ fn app_creator(launch: Launch, graphics: graphics::GraphicsStart, created: Arc<A
             }
         }
         let mut app = FilmcraftApp::new(session);
-        app.set_startup_update_check(true);
+        // @Film: no update check at start. It looks for FilmCraft releases (storytold/filmcraft) and
+        // would offer to replace @Film with FilmCraft; new @Film versions come from its own releases.
+        app.set_startup_update_check(false);
         app.graphics_notice = notice;
         if recover == Some(false) {
             app.dialog = None;
