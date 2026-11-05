@@ -197,6 +197,8 @@ pub async fn start(canvas_id: String) -> Result<(), JsValue> {
                 let social = filmcraft_engine::export::presets::SOCIAL_PRESET;
                 session.export_queue.quick_preset = Some(social.to_string());
                 let mut app = FilmcraftApp::new(session);
+                // @Film: the web opens in the Reel workspace.
+                app.set_workspace("Reel");
                 if let Some(preset) = filmcraft_engine::export::presets::find_builtin(social) {
                     app.ui.export.preset = preset.name;
                     app.ui.export.settings = preset.settings;

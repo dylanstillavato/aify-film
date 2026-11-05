@@ -185,6 +185,7 @@ fn save_switch_reset_rename_delete_and_restart() {
             "Editing",
             "Effects",
             "Learning",
+            "Reel",
             "Review",
             "Reset to Saved Layout",
             "Save Changes to this Workspace",

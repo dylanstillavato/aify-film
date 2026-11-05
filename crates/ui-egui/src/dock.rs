@@ -41,10 +41,12 @@ pub enum PanelKind {
     ReferenceMonitor,
     Timecode,
     ProjectNotes,
+    /// @Film: the Reel workspace's big buttons (`panels/reel.rs`).
+    Reel,
 }
 
 impl PanelKind {
-    pub const ALL: [PanelKind; 28] = [
+    pub const ALL: [PanelKind; 29] = [
         PanelKind::Project,
         PanelKind::MediaBrowser,
         PanelKind::Libraries,
@@ -73,6 +75,7 @@ impl PanelKind {
         PanelKind::ReferenceMonitor,
         PanelKind::Timecode,
         PanelKind::ProjectNotes,
+        PanelKind::Reel,
     ];
     pub fn title(self) -> &'static str {
         match self {
@@ -104,6 +107,7 @@ impl PanelKind {
             PanelKind::ReferenceMonitor => "Reference Monitor",
             PanelKind::Timecode => "Timecode",
             PanelKind::ProjectNotes => "Project Notes",
+            PanelKind::Reel => "Reel",
         }
     }
     pub fn id(self) -> String {
@@ -145,7 +149,7 @@ fn vsplit(size: SplitSize, a: Node<PanelKind>, b: Node<PanelKind>) -> Node<Panel
     Node::Split { axis: SplitAxis::Vertical, size, first: Box::new(a), second: Box::new(b) }
 }
 
-pub const WORKSPACES: [&str; 9] = ["Editing", "Assembly", "Color", "Effects", "Audio", "Captions and Graphics", "Learning", "Review", "All Panels"];
+pub const WORKSPACES: [&str; 10] = ["Reel", "Editing", "Assembly", "Color", "Effects", "Audio", "Captions and Graphics", "Learning", "Review", "All Panels"];
 
 /// The user's workspaces file, beside `preferences.json` in the data directory.
 pub const WORKSPACES_FILE: &str = "workspaces.json";
@@ -432,6 +436,12 @@ fn workspace_root(name: &str) -> Node<PanelKind> {
         )
     };
     match name {
+        // @Film: a big Program monitor over the Timeline, and the Reel buttons beside them.
+        "Reel" => hsplit(
+            Ratio(0.8),
+            vsplit(Ratio(0.6), tabs(&[Program], 0), bottom_editing()),
+            vsplit(Ratio(0.55), tabs(&[Reel], 0), tabs(&[Project, MediaBrowser, Text, EssentialGraphics, Properties], 0)),
+        ),
         "Assembly" => vsplit(
             Ratio(0.52),
             hsplit(
