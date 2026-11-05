@@ -187,6 +187,12 @@ pub async fn start(canvas_id: String) -> Result<(), JsValue> {
                 } else if demo {
                     let _ = session.execute("file.openDemoProject", json!({}));
                 }
+                // @Film: the Aify theme by default (the web build keeps no preferences between visits).
+                for key in ["appearance.darkTheme", "appearance.colorTheme"] {
+                    if let Err(e) = session.execute("prefs.set", json!({"key": key, "value": "aify"})) {
+                        log::warn!("{key}: {e}");
+                    }
+                }
                 let mut app = FilmcraftApp::new(session);
                 import::install_hooks(&mut app);
                 // Settings ▸ General ▸ Interface Language ▸ System Language (#218): the browser's languages,

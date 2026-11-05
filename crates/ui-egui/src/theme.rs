@@ -16,6 +16,9 @@ pub enum ThemeKind {
     /// Slightly lighter grey panels (Premiere's brightness slider mid position).
     Medium,
     Light,
+    /// @Film's own dark look (the web build's default): graphite panels on a near-black base, Aify
+    /// blue for actions and lime for the active tab, the playhead and the timecode.
+    Aify,
 }
 
 impl ThemeKind {
@@ -25,12 +28,14 @@ impl ThemeKind {
             ThemeKind::Dark => "darkest",
             ThemeKind::Medium => "dark",
             ThemeKind::Light => "light",
+            ThemeKind::Aify => "aify",
         }
     }
     pub fn from_pref(s: &str) -> ThemeKind {
         match s {
             "dark" => ThemeKind::Medium,
             "light" => ThemeKind::Light,
+            "aify" => ThemeKind::Aify,
             _ => ThemeKind::Dark,
         }
     }
@@ -39,6 +44,7 @@ impl ThemeKind {
             "dark" | "darkest" => Some(ThemeKind::Dark),
             "medium" | "grey" | "gray" => Some(ThemeKind::Medium),
             "light" => Some(ThemeKind::Light),
+            "aify" => Some(ThemeKind::Aify),
             _ => None,
         }
     }
@@ -243,6 +249,47 @@ impl Tokens {
         };
         match kind {
             ThemeKind::Dark => dark,
+            ThemeKind::Aify => {
+                let base = Color32::from_rgb(0x09, 0x0a, 0x0c);
+                let card = Color32::from_rgb(0x16, 0x17, 0x1b);
+                let blue = Color32::from_rgb(0x1d, 0x5f, 0xe0);
+                let lime = Color32::from_rgb(0xd7, 0xff, 0x3d);
+                Tokens {
+                    app_bg: base,
+                    header_bg: base,
+                    panel_bg: card,
+                    tab_bg: card,
+                    tab_text: Color32::from_rgb(0x9a, 0x9c, 0xa3),
+                    tab_text_active: lime,
+                    focus: blue,
+                    accent: blue,
+                    accent_hover: Color32::from_rgb(0x2a, 0x6b, 0xea),
+                    text: Color32::from_rgb(0xe4, 0xe4, 0xe7),
+                    text_dim: Color32::from_rgb(0x9a, 0x9c, 0xa3),
+                    hover: Color32::from_rgb(0x22, 0x24, 0x2a),
+                    pressed: Color32::from_rgb(0x2c, 0x2f, 0x36),
+                    field_bg: Color32::from_rgb(0x0e, 0x0f, 0x12),
+                    field_border: Color32::from_rgb(0x2a, 0x2c, 0x33),
+                    separator: Color32::from_rgb(0x24, 0x26, 0x2c),
+                    row_alt: Color32::from_rgb(0x1a, 0x1b, 0x20),
+                    row_selected: Color32::from_rgb(0x26, 0x2a, 0x33),
+                    hot_text: lime,
+                    pill_active_bg: Color32::from_rgb(0x2c, 0x2f, 0x36),
+                    clip_bar_bg: Color32::from_rgb(0x2b, 0x24, 0x40),
+                    caption_track_bg: Color32::from_rgb(0x22, 0x1d, 0x33),
+                    tl_bg: card,
+                    tl_track_bg: card,
+                    tl_track_bg_alt: card,
+                    tl_header_bg: card,
+                    tl_ruler_bg: card,
+                    playhead: lime,
+                    track_target: blue,
+                    monitor_bg: card,
+                    timecode: lime,
+                    radius_sm: 6.0,
+                    ..dark
+                }
+            }
             ThemeKind::Medium => Tokens {
                 app_bg: Color32::from_rgb(20, 20, 20),
                 header_bg: Color32::from_rgb(0x32, 0x32, 0x32),
@@ -337,6 +384,9 @@ impl Tokens {
     /// the focus outline, the playhead, timecodes, drag values and track targeting) and accessible
     /// colour contrast (brighter secondary text and borders).
     pub fn with_appearance(mut self, highlight: Option<[u8; 3]>, accessible_contrast: bool) -> Self {
+        // The Aify theme has its own blue and lime: FilmCraft's default highlight leaves them as designed.
+        let highlight = highlight
+            .filter(|h| !(self.kind == ThemeKind::Aify && Some(*h) == filmcraft_engine::settings::parse_hex(filmcraft_engine::settings::DEFAULT_HIGHLIGHT)));
         if let Some([r, g, b]) = highlight {
             let c = Color32::from_rgb(r, g, b);
             // A highlight of the user's own also colours the theme's other blues: the same hue, as
@@ -584,7 +634,7 @@ mod tests {
     #[test]
     fn the_default_highlight_leaves_the_theme_blues_as_designed() {
         let default = filmcraft_engine::settings::parse_hex(filmcraft_engine::settings::DEFAULT_HIGHLIGHT);
-        for k in [ThemeKind::Dark, ThemeKind::Medium, ThemeKind::Light] {
+        for k in [ThemeKind::Dark, ThemeKind::Medium, ThemeKind::Light, ThemeKind::Aify] {
             assert_eq!(highlight_blues(&Tokens::for_kind(k).with_appearance(default, false)), highlight_blues(&Tokens::for_kind(k)), "{k:?}");
         }
     }
